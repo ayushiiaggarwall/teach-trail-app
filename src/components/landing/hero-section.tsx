@@ -281,7 +281,7 @@ export function HeroSection() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="px-10 py-4 text-lg glass-card border-white/20"
+                className="px-10 py-4 text-lg glass-card border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 hover:text-primary transition-all duration-300"
               >
                 <Play className="mr-3 h-5 w-5" />
                 See Syllabus
