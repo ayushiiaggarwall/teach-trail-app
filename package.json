@@ -2,11 +2,16 @@
   "name": "lms-platform",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{js,ts,jsx,tsx}\"",
     "test": "vitest",
     "test:e2e": "playwright test",
@@ -14,7 +19,9 @@
     "theme:yellow": "tsx scripts/apply-tweakcn-theme.ts yellowPurpleBlack",
     "theme:sage": "tsx scripts/apply-tweakcn-theme.ts sageMint",
     "theme:flamingo": "tsx scripts/apply-tweakcn-theme.ts flamingo",
-    "gen:shadcn": "npx shadcn@latest init && npx shadcn@latest add button input card badge sheet dialog toast navigation-menu dropdown-menu textarea label avatar tabs tooltip skeleton"
+    "gen:shadcn": "npx shadcn@latest init && npx shadcn@latest add button input card badge sheet badge sheet dialog toast navigation-menu dropdown-menu textarea label avatar tabs tooltip skeleton",
+    "build:check": "next build && next start",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
