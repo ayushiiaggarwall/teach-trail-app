@@ -23,7 +23,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
+    port: 8080,
     open: true,
   },
   optimizeDeps: {
