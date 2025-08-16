@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
   images: {
     domains: ['images.unsplash.com', 'images.pexels.com'],
     unoptimized: true
