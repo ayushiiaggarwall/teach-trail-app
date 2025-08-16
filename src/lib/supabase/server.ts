@@ -1,5 +1,5 @@
 import { createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
+// Note: This is a client-side only setup for Vite/React Router
 import { Database } from './database.types'
 import { createMockClient } from './mock-client'
 
@@ -14,28 +14,6 @@ export const createClient = () => {
     return createMockClient() as any
   }
 
-  const cookieStore = cookies()
-
-  return createServerClient<Database>(
-    supabaseUrl,
-    supabaseAnonKey,
-    {
-      cookies: {
-        getAll() {
-          return cookieStore.getAll()
-        },
-        setAll(cookiesToSet) {
-          try {
-            cookiesToSet.forEach(({ name, value, options }) =>
-              cookieStore.set(name, value, options)
-            )
-          } catch {
-            // The `setAll` method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
-          }
-        },
-      },
-    }
-  )
+  // For client-side React Router, use regular client
+  return createMockClient() as any
 }

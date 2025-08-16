@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { Link } from "@/components/ui/link"
+import { useRouter } from "@/lib/router"
 import { 
   BookOpen, 
   Bell, 

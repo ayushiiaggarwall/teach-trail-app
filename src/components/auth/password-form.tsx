@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label"
 import { loginSchema, signupSchema, type LoginInput, type SignupInput } from "@/lib/validations/auth"
 import { PasswordStrength } from "./password-strength"
 import { createClient } from "@/lib/supabase/client"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/lib/router"
 
 interface PasswordFormProps {
   mode: "login" | "signup"

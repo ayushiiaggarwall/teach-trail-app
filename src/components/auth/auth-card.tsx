@@ -9,9 +9,10 @@ interface AuthCardProps {
   title: string
   description?: string
   className?: string
+  type?: "login" | "signup"
 }
 
-export function AuthCard({ children, title, description, className }: AuthCardProps) {
+export function AuthCard({ children, title, description, className, type }: AuthCardProps) {
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-purple-600 via-accent to-primary">
       {/* Left side - Welcome section with floating circles */}

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { createClient } from "@/lib/supabase/client"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/lib/router"
 
 interface OAuthButtonsProps {
   mode: "login" | "signup"

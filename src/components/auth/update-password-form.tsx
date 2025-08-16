@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label"
 import { updatePasswordSchema, type UpdatePasswordInput } from "@/lib/validations/auth"
 import { PasswordStrength } from "./password-strength"
 import { createClient } from "@/lib/supabase/client"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "@/lib/router"
 
 interface UpdatePasswordFormProps {
   onSuccess?: () => void
