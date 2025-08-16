@@ -1,0 +1,16 @@
+{
+  "build": {
+    "command": "npm run build",
+    "output": "dist",
+    "install": "npm install"
+  },
+  "deploy": {
+    "command": "npm run preview",
+    "port": 4173
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "framework": "vite",
+  "static": true
+}
